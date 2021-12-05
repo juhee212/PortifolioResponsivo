@@ -1,0 +1,474 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: black;
+}
+                  
+/*cabeçalho*/
+.listra {
+    width: 100%;
+    height: 5px;
+    background-color: #e6a756;
+}
+.listra2 {
+    width: 100%;
+    height: 1px;
+    background-color: #e6a756;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.logotop{
+    max-width: 170px;
+    
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-item{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 20px;
+    margin: 0.7px;
+}
+
+@media screen and (min-width:770px) {
+    .nav-indicator {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        transition: 0.4s;
+        height: 5px;
+        z-index: 1;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /*Esmaecer ao passar mouse*/
+    .nav-item:before {
+        align-items: center;
+        content: "";
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #e6a756;
+        border-radius: 8px 8px 0 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .nav-item:not(.is-active):hover:before {
+        align-items: center;
+        opacity: 1;
+        bottom: 0;
+    }
+
+    .nav-item:not(.is-active):hover {
+        color: #333;
+        bottom: 0;
+    }
+}
+
+/*Icone menu*/
+.burguer{
+    display: none;
+    cursor: pointer;
+}
+
+.burguer div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/*Espaçamento responsividade*/
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+
+/*Celular*/
+@media screen and (max-width:768px){
+    /*Caixa do menu*/
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        opacity: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    /*Opções*/
+    .nav-item {
+        opacity: 98%;
+    }
+    .burguer{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+/*Opacidade caixa de menu*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*Efeito botão Menu*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-3px,-6px);
+}
+/*Fim cabeçalho*/
+
+
+
+
+
+/*Quem sou*/
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    line-height: 1.2;
+}
+h2{
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+
+.page-section {
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+}
+
+.section-heading {
+    text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.section-heading .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.bg-faded {
+    background-color: #f6e1c5;
+}
+
+
+.intro-button{
+    border-radius: 10px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+.section-heading {
+    text-transform: uppercase;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-lg-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.btn-xl {
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+  box-shadow: 0 0 0 0.25rem rgba(196, 142, 73, 0.5);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(196, 142, 73, 0.5);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+@media (min-width: 1200px) {
+    h2, .h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+  .intro .intro-img{
+    width: 50%;
+    float: right;
+  }
+  .intro-img2 {
+    width: 50%;
+    float: left;
+  }
+  .intro2 .intro-text2 {
+    left: 597px;
+    width: 58%;
+    margin-top: 25rem;
+    position: absolute;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 7rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button, .intro2 .intro-text2 .intro-button2{
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 60%;
+  }
+}
+
+@keyframes placeholder-wave {
+    100% {
+        mask-position: -200% 0%;
+        mask-position: -200% 0%;
+    }
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+
+
+
+
+
+/*Página 2*/
+/*Trabalhos*/
+.container-galeria{
+    display: grid;
+    padding-top: 5px;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 300px;
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+.item-galeria{
+    position: relative;
+}
+
+.item-galeria .img-galeria{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+
+.h-2{
+    grid-row: span 2;
+
+}
+
+.w-1{
+    grid-column: span 1;
+}
+
+.w-2{
+    grid-column: span 2;
+}
+
+@media(max-width:768px){
+    .container-galeria {
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows: 50vh;
+    }
+    .h-2 {
+        grid-row: span 1;
+    }
+
+    .w-2 {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+
+footer {
+    max-width: 1500px;
+    height: 240px;
+    background-color: white;
+    border-top: 3px solid #e6a756;
+}
+
+.logofooter{
+    max-width: 270px;
+    padding: 30px;
+}
+
+.el1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.el1 .redes{
+    width: auto; 
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.el1 .redes i{
+    width: auto;
+    align-content: space-between;
+    padding-left: 6px;
+    color: gray;
+}
+
+.el1 ul .caminhos {
+    display: inline-block;
+    list-style: none;
+    padding-left: 6px;
+    padding-top: 10px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.copywrite{
+    padding-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
